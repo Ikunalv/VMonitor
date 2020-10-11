@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.kunal.myapplication.AccountActivity.LoginActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:srcCompat="@drawable/logo" />
+
+        <EditText
+            style="@style/editText_style"
+            android:id="@+id/inputemail"
+            android:hint="Username"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/inputpassword"
+            style="@style/editText_style"
+            android:textColor="@color/black"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/button_style"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:text="Log in" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            style="@style/button_style"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:text="Register" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/textView_style"
+            android:text="Forgot your password?" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
+

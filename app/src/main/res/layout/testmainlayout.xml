@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/v"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/wego" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TVS WEGO 110"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="PARKED"
+        android:textColor="@color/colorWhite"
+        tools:layout_editor_absoluteY="227dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="360dp"
+        android:layout_height="90dp"
+        tools:layout_editor_absoluteY="246dp">
+
+        <ImageView
+            android:id="@+id/lockstate"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_lock_open_black_24dp"
+            tools:layout_editor_absoluteX="79dp" />
+
+        <TextView
+            android:id="@+id/lockstatetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lock"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="54dp" />
+
+        <ImageView
+            android:id="@+id/lightstate"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_flash_off_black_24dp"
+            tools:layout_editor_absoluteX="279dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/lightstatetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="268dp"
+            tools:layout_editor_absoluteY="54dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+
+        android:layout_height="35dp"
+
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:onClick="location"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.635"
+        tools:layout_editor_absoluteX="25dp">
+
+        <ImageView
+            android:id="@+id/loc_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+        <TextView
+            android:id="@+id/addr"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:singleLine="true"
+            android:text="Current Address"
+            android:textColor="@color/colorWhite"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="103dp"
+            tools:layout_editor_absoluteY="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:text="LOCATION"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.292"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="19dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="380dp" />
+</android.support.constraint.ConstraintLayout>

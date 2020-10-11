@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main__background"
+
+    tools:context="com.example.kunal.myapplication.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:fontFamily="@font/sanfranciscodisplaybold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Dashboard"
+      app:titleMarginStart="140sp"
+        app:titleTextColor="@color/colorWhite"
+        android:layout_marginLeft="0dp">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="182dp"
+        android:src="@drawable/wego"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="TVS WEGO 110"
+        android:fontFamily="@font/sanfranciscodisplaybold"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/sanfranciscodisplayregular"
+        android:gravity="center"
+        android:text="PARKED"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name">
+
+        <ImageView
+            android:id="@+id/lockstate"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="100dp"
+            app:srcCompat="@drawable/ic_lock_open_black_24dp" />
+
+        <TextView
+            android:id="@+id/lockstatetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85sp"
+            android:layout_marginTop="56sp"
+            android:text="Lock"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:fontFamily="@font/sanfranciscodisplayregular"
+            android:layout_marginStart="95sp" />
+
+        <ImageView
+            android:id="@+id/lightstate"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="260dp"
+            app:srcCompat="@drawable/ic_flash_off_black_24dp" />
+
+        <TextView
+            android:id="@+id/lightstatetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="270sp"
+            android:layout_marginTop="56sp"
+            android:text="Light"
+            android:fontFamily="@font/sanfranciscodisplayregular"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:clickable="true"
+            android:onClick="location"
+            app:cardBackgroundColor="@android:color/transparent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="379dp">
+
+            <ImageView
+                android:id="@+id/loc_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:fontFamily="@font/sanfranciscodisplayregular"
+                android:layout_marginTop="15dp"
+                android:text="LOCATION"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+            <ImageView
+
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="19dp"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+            <TextView
+                android:id="@+id/addr"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:fontFamily="@font/sanfranciscodisplayregular"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="40sp"
+                android:singleLine="true"
+                android:text="Current Address"
+                android:textColor="@color/colorWhite"
+                android:textSize="12dp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/conrols"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:onClick="controls"
+            app:cardBackgroundColor="@android:color/transparent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="449dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                app:srcCompat="@drawable/ic_directions_bike_white_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="22dp"
+                android:text="CONTROLS"
+                android:fontFamily="@font/sanfranciscodisplayregular"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+            <ImageView
+
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="19dp"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/documents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/conrols"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:onClick="documents"
+            app:cardBackgroundColor="@android:color/transparent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="519dp">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                app:srcCompat="@drawable/ic_insert_drive_file_white_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:fontFamily="@font/sanfranciscodisplayregular"
+                android:layout_marginTop="22dp"
+                android:text="DOCUMENTS"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+            <ImageView
+
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="19dp"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/notifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/documents"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:onClick="notifications"
+            app:cardBackgroundColor="@android:color/transparent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="589dp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+            <ImageView
+
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="19dp"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/sanfranciscodisplayregular"
+                android:text="ALERTS"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:onClick="settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_settings_black_24dp" />
+
+
+</android.support.constraint.ConstraintLayout>

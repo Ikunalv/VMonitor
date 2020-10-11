@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main__background">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:fontFamily="@font/sanfranciscodisplaybold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Controls"
+        app:titleMarginStart="170sp"
+        app:titleTextColor="@color/colorWhite"
+        android:layout_marginLeft="0dp">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="165dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar2"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/wego" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:id="@+id/name"
+        android:text="TVS WEGO 110"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PARKED"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:id="@+id/textView4" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/lck1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            app:srcCompat="@drawable/ic_lock_open_black_24dp" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/togglebutton2"
+            android:layout_alignBottom="@+id/togglebutton2"
+            android:layout_alignLeft="@+id/hr2"
+            android:layout_alignStart="@+id/hr2"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp"
+            android:background="@drawable/button"
+            android:onClick="isHorn"
+            android:text="honk!"
+            android:textColor="@color/colorWhite" />
+
+        <ImageView
+            android:id="@+id/lgt1"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_alignEnd="@+id/togglebutton1"
+            android:layout_alignRight="@+id/togglebutton1"
+            android:layout_below="@+id/hr2"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="23dp"
+            android:src="@drawable/ic_flash_on_black_24dp" />
+
+        <ToggleButton
+            android:id="@+id/togglebutton1"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btn"
+            android:layout_alignStart="@+id/btn"
+            android:layout_below="@+id/lck1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/button"
+            android:onClick="lock"
+            android:textColor="@color/colorWhite"
+            android:textOff="Lock"
+            android:textOn="Unlock" />
+
+        <TableRow
+            android:id="@+id/hr2"
+            android:layout_width="325dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/togglebutton1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorWhite"
+            android:gravity="center">
+
+        </TableRow>
+
+
+        <ToggleButton
+            android:id="@+id/togglebutton2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/hr2"
+            android:layout_alignRight="@+id/hr2"
+            android:layout_below="@+id/lgt1"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/button"
+            android:onClick="light"
+            android:textColor="@color/colorWhite"
+            android:textOff="Lights Off"
+            android:textOn="LIGHTS ON" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

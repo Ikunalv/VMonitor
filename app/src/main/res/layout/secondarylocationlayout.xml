@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/layout_bg">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="15dp"
+        android:id="@+id/addr"
+android:maxLines="2"
+     android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:text="secondary screen"
+       android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"/>
+
+</android.support.constraint.ConstraintLayout>
